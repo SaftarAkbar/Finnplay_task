@@ -1,0 +1,106 @@
+.home_container {
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 1rem;
+    padding: 0 5rem;
+    margin: 4.5rem 0;
+    position: relative;
+}
+
+.grid-col-2 {
+    grid-template-columns: repeat(2, auto);
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.home_container .home_container__games_grid {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.home_container .home_container__games_grid img {
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+/* Filter sidebar */
+.filter-subtitle {
+    color: #808080;
+}
+
+.home_container .home_container__filter {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+}
+
+.home_container__filter__section {
+    margin-top: 2rem;
+}
+
+.home_container__filter__section__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.7rem 0;
+    gap: 0.5rem;
+}
+
+.home_container__filter__section__items span {
+    padding: .5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.home_container__filter__section .active {
+    background: #FDBC11;
+}
+
+.home_container__filter__section__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.filter-button-container{
+    display: none;
+}
+
+@media only screen and (max-width: 428px) {
+    .home_container {
+        /* grid-template-columns: 100%; */
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home_container__games_grid{
+        grid-template-columns: repeat(2, auto);
+    }
+    .filter-inside-container{
+        display: none;
+        height: 0rem;
+    }
+    .home_container .home_container__filter{
+        background: white;
+        overflow-y:auto;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: auto;
+    }
+    .filter-button-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}

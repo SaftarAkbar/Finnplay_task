@@ -1,0 +1,38 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.slider-num {
+    background: rgb(229, 225, 225);
+    border-radius: 50px;
+    width: 3rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-left: -1rem;
+    cursor: pointer;
+}
+
+.active-slider {
+    background: #FDBC11 !important;
+}
+
+.slider-stick {
+    display: inline-block;
+    width: 100%;
+    background: rgb(229, 225, 225);
+    z-index: 5;
+    margin-left: -1rem;
+}
+
+@media only screen and (max-width: 428px) {
+    .columns-section {
+        display: none;
+    }
+}
